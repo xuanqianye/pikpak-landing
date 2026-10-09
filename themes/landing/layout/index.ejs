@@ -14,6 +14,27 @@
     <p class="msg"><%= config.access_message %></p>
     <p class="msg"><%= config.access_message2 %></p>
     <a class="cta" href="<%= config.pikpak_url %>" target="_blank" rel="noopener sponsored"><%= config.cta_text %> →</a>
+    <div class="counter">Total visits: <span id="visit-count">—</span></div>
+    <script>
+      (function () {
+        var el = document.getElementById('visit-count');
+        var dayKey = 'fw_visit_' + new Date().toISOString().slice(0, 10);
+        var api = 'https://api.countapi.xyz';
+        function show(n) { el.textContent = Number(n).toLocaleString(); }
+        if (localStorage.getItem(dayKey)) {
+          fetch(api + '/get/feetworld-cc/total-visits')
+            .then(function (r) { return r.json(); })
+            .then(function (d) { show(d.value); })
+            .catch(function () { el.textContent = '—'; });
+        } else {
+          localStorage.setItem(dayKey, '1');
+          fetch(api + '/hit/feetworld-cc/total-visits')
+            .then(function (r) { return r.json(); })
+            .then(function (d) { show(d.value); })
+            .catch(function () { el.textContent = '—'; });
+        }
+      })();
+    </script>
   </div>
 </body>
 </html>
