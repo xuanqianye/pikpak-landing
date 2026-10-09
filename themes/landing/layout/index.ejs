@@ -19,20 +19,13 @@
       (function () {
         var el = document.getElementById('visit-count');
         var dayKey = 'fw_visit_' + new Date().toISOString().slice(0, 10);
-        var api = 'https://api.countapi.xyz';
         function show(n) { el.textContent = Number(n).toLocaleString(); }
-        if (localStorage.getItem(dayKey)) {
-          fetch(api + '/get/feetworld-cc/total-visits')
-            .then(function (r) { return r.json(); })
-            .then(function (d) { show(d.value); })
-            .catch(function () { el.textContent = '—'; });
-        } else {
-          localStorage.setItem(dayKey, '1');
-          fetch(api + '/hit/feetworld-cc/total-visits')
-            .then(function (r) { return r.json(); })
-            .then(function (d) { show(d.value); })
-            .catch(function () { el.textContent = '—'; });
-        }
+        var post = !localStorage.getItem(dayKey);
+        if (post) localStorage.setItem(dayKey, '1');
+        fetch('/api/visitor-count', { method: post ? 'POST' : 'GET' })
+          .then(function (r) { return r.json(); })
+          .then(function (d) { if (typeof d.count === 'number') show(d.count); else el.textContent = '—'; })
+          .catch(function () { el.textContent = '—'; });
       })();
     </script>
   </div>
