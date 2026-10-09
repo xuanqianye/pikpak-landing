@@ -1,9 +1,9 @@
 # ============================================================
 # Hexo 基础配置
 # ============================================================
-title: PikPak - Your Private Cloud & Offline Download
+title: "Feetworld - Foot-focused photos & videos"
 subtitle: ''
-description: Get PikPak — ultra-fast offline download and huge private cloud storage. Free to start.
+description: "Feetworld: Your destination for foot-focused photos and videos, showcasing warm, artistic foot portraits."
 language: en
 timezone: ''
 
@@ -18,12 +18,12 @@ theme: landing
 # ============================================================
 # 引导页自定义变量（改这里就行，不用动代码）
 # ============================================================
-# PikPak 推广/邀请链接（最终 CTA 目标）
+# PikPak 云盘文件链接（落地目标：先访问云盘文件，非广告词）
 pikpak_url: "https://mypikpak.com/s/VP3V3ddFhPQOmLUf5IV7Ue3Go2"
-cta_text: "Get PikPak Free"
-brand: "PikPak"
-access_title: "Almost there"
-access_message: "Your free cloud is one click away. Tap below to open PikPak and start."
+cta_text: "OPEN PikPak"
+brand: "Feetworld"
+access_message: "Your destination for foot-focused photos and videos, showcasing warm, artistic foot portraits."
+access_message2: "The website is not fully launched yet - please visit our PikPak cloud drive files first！"
 
 # ============================================================
 # 首页生成器（单页引导站必须，控制根 index.html 渲染）
