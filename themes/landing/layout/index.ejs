@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="<%= config.language %>">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= config.title %></title>
+  <meta name="description" content="<%= config.description %>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="badge">✦ <%= config.brand %></div>
+      <h1><%= config.hero_title %></h1>
+      <p class="sub"><%= config.hero_subtitle %></p>
+      <a class="cta" href="<%= config.pikpak_url %>" target="_blank" rel="noopener sponsored"><%= config.cta_text %> →</a>
+      <p class="note">No credit card required · Works on iOS, Android &amp; Web</p>
+    </header>
+
+    <section class="features">
+      <div class="card">
+        <div class="ico">⚡</div>
+        <h3>Ultra-fast Offline Download</h3>
+        <p>Drop a magnet or torrent link and watch it land in your cloud in seconds.</p>
+      </div>
+      <div class="card">
+        <div class="ico">☁️</div>
+        <h3>Massive Private Storage</h3>
+        <p>Keep your whole collection safe, organized and available anywhere.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🔒</div>
+        <h3>Private &amp; Secure</h3>
+        <p>Your files stay yours. Encrypted end-to-end and never shared.</p>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <h2><%= config.features_band_title %></h2>
+      <a class="cta cta-lg" href="<%= config.pikpak_url %>" target="_blank" rel="noopener sponsored"><%= config.cta_text %> →</a>
+    </section>
+
+    <footer>
+      <p>© <%= new Date().getFullYear() %> <%= config.brand %>. Promotional landing page.</p>
+    </footer>
+  </div>
+</body>
+</html>

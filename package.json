@@ -1,0 +1,19 @@
+{
+  "name": "pikpak-landing",
+  "version": "1.0.0",
+  "private": true,
+  "hexo": {
+    "version": "7.3.0"
+  },
+  "description": "PikPak affiliate landing page (Hexo static -> Cloudflare Pages)",
+  "scripts": {
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "server": "hexo server"
+  },
+  "dependencies": {
+    "hexo": "^7.3.0",
+    "hexo-generator-index": "^3.0.0",
+    "hexo-renderer-ejs": "^2.0.0"
+  }
+}
