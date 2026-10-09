@@ -7,8 +7,8 @@ description: Get PikPak — ultra-fast offline download and huge private cloud s
 language: en
 timezone: ''
 
-# TODO: 部署时改成最终域名（子域名推荐 pikpak.feetworld.cc；若放 apex 则 feetworld.cc）
-url: https://pikpak.feetworld.cc
+# 最终域名（用户确认：直接覆盖原美足站，用 apex）
+url: https://feetworld.cc
 root: /
 permalink: :title/
 
