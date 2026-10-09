@@ -22,9 +22,8 @@ theme: landing
 pikpak_url: "https://mypikpak.com/s/VP3V3ddFhPQOmLUf5IV7Ue3Go2"
 cta_text: "Get PikPak Free"
 brand: "PikPak"
-hero_title: "All Your Media, One Smart Cloud"
-hero_subtitle: "Blazing-fast offline download. Huge private storage. Encrypted & always accessible. Start free."
-features_band_title: "Start your free cloud now"
+access_title: "Almost there"
+access_message: "Your free cloud is one click away. Tap below to open PikPak and start."
 
 # ============================================================
 # 首页生成器（单页引导站必须，控制根 index.html 渲染）
