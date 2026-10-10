@@ -28,6 +28,9 @@ h1{font-size:40px;font-weight:800;letter-spacing:1px;margin-bottom:16px;line-hei
 }
 .cta:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(255,46,99,.45)}
 .counter{margin-top:30px;font-size:13px;color:var(--muted);letter-spacing:.4px}
+.contact{margin-top:16px;font-size:13px;color:var(--muted);letter-spacing:.4px}
+.contact a{color:var(--pink);text-decoration:none}
+.contact a:hover{text-decoration:underline}
 footer{margin-top:42px;color:var(--muted);font-size:12px}
 @media(max-width:640px){
   h1{font-size:30px}
