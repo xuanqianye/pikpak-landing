@@ -14,21 +14,9 @@
     <p class="msg"><%= config.access_message %></p>
     <p class="msg"><%= config.access_message2 %></p>
     <a class="cta" href="<%= config.pikpak_url %>" target="_blank" rel="noopener sponsored"><%= config.cta_text %> →</a>
-    <div class="counter">Total visits: <span id="visit-count">—</span></div>
     <div class="contact">Contact Us: <a href="mailto:feetworld2026@outlook.com">✉︎ feetworld2026@outlook.com</a></div>
-    <script>
-      (function () {
-        var el = document.getElementById('visit-count');
-        var dayKey = 'fw_visit_' + new Date().toISOString().slice(0, 10);
-        function show(n) { el.textContent = Number(n).toLocaleString(); }
-        var post = !localStorage.getItem(dayKey);
-        if (post) localStorage.setItem(dayKey, '1');
-        fetch('/api/visitor-count', { method: post ? 'POST' : 'GET' })
-          .then(function (r) { return r.json(); })
-          .then(function (d) { if (typeof d.count === 'number') show(d.count); else el.textContent = '—'; })
-          .catch(function () { el.textContent = '—'; });
-      })();
-    </script>
   </div>
+  <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+  <script>LA.init({id:"3RTMITLdHyDwbljF",ck:"3RTMITLdHyDwbljF"})</script>
 </body>
 </html>
