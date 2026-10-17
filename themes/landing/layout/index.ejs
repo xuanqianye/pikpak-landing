@@ -9,11 +9,13 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=<%= Date.now() %>">
 </head>
 <body>
-  <!-- 语言切换：简体 / 繁體 / EN -->
+  <!-- 语言切换：简体 / 繁體 / EN / 日本語 / 한국어 -->
   <div class="lang-bar" id="langBar">
     <button type="button" data-lang="zh">简体</button>
     <button type="button" data-lang="tw">繁體</button>
     <button type="button" data-lang="en">EN</button>
+    <button type="button" data-lang="ja">日本語</button>
+    <button type="button" data-lang="ko">한국어</button>
   </div>
 
   <div class="wrap">
@@ -101,11 +103,39 @@
       qrTip: 'Scan to open',
       contact: 'Contact Us',
       disclaimer: 'Files are hosted on third-party cloud drives. This page is for navigation only.'
+    },
+    ja: {
+      msg1: '足に焦点を当てた写真と動画をお届けします。温かく、芸術的な足のポートレートをご紹介します。',
+      msg2: 'ウェブサイトはまだ完全には公開されていません - まずは私たちのクラウドドライブのファイルをご覧ください！',
+      xunleiTitle: '迅雷（Xunlei）クラウドドライブ',
+      xunleiDesc: 'ボタンをタップすると迅雷クラウドドライブが開き、自動的に移動します。開かない場合は、リンクをコピーしてブラウザで開いてください。',
+      xunleiBtn: '↓ 迅雷から取得',
+      pikTitle: 'PikPak クラウドドライブ',
+      pikDesc: '海外のユーザーにおすすめ：ダウンロード速度制限なし、大容量。',
+      pikBtn: '↓ PikPak を開く',
+      copy: '⧉ コピー', copied: '✓ コピー済み',
+      qrTip: 'スキャンして開く',
+      contact: 'お問い合わせ',
+      disclaimer: 'ファイルはサードパーティのクラウドドライブでホストされています。このページはナビゲーションのみを目的としています。'
+    },
+    ko: {
+      msg1: '발에 초점을 맞춘 사진과 동영상을 제공하며, 따뜻하고 예술적인 발 초상화를 선보입니다.',
+      msg2: '웹사이트는 아직 완전히 오픈되지 않았습니다 - 먼저 저희 클라우드 드라이브 파일을 확인해 주세요!',
+      xunleiTitle: '쉰레이(Xunlei) 클라우드 드라이브',
+      xunleiDesc: '버튼을 눌러 쉰레이 클라우드 드라이브를 열고 자동으로 이동합니다. 열리지 않으면 링크를 복사하여 브라우저에서 여세요.',
+      xunleiBtn: '↓ 쉰레이에서 받기',
+      pikTitle: 'PikPak 클라우드 드라이브',
+      pikDesc: '해외 사용자에게 추천: 무제한 다운로드 속도, 대용량 저장.',
+      pikBtn: '↓ PikPak 열기',
+      copy: '⧉ 복사', copied: '✓ 복사됨',
+      qrTip: '스캔하여 열기',
+      contact: '문의하기',
+      disclaimer: '파일은 제3자 클라우드 드라이브에 저장됩니다. 이 페이지는 안내용으로만 제공됩니다.'
     }
   };
   function curLang() {
     var l = localStorage.getItem('fw_lang');
-    return (l === 'tw' || l === 'en') ? l : 'zh';
+    return (l === 'tw' || l === 'en' || l === 'ja' || l === 'ko') ? l : 'zh';
   }
   function setLang(l) {
     localStorage.setItem('fw_lang', l);
@@ -117,7 +147,8 @@
     document.querySelectorAll('#langBar button').forEach(function (b) {
       b.classList.toggle('on', b.getAttribute('data-lang') === l);
     });
-    document.documentElement.lang = (l === 'zh') ? 'zh-CN' : (l === 'tw' ? 'zh-TW' : 'en');
+    var langMap = { zh:'zh-CN', tw:'zh-TW', en:'en', ja:'ja', ko:'ko' };
+    document.documentElement.lang = langMap[l] || 'zh-CN';
   }
   document.querySelectorAll('#langBar button').forEach(function (b) {
     b.addEventListener('click', function () { setLang(this.getAttribute('data-lang')); });

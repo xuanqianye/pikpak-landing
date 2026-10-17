@@ -19,7 +19,7 @@ body{
 .wrap{max-width:480px;margin:0 auto}
 
 /* 语言切换栏 */
-.lang-bar{position:fixed;top:14px;right:14px;display:flex;gap:6px;z-index:99}
+.lang-bar{position:fixed;top:14px;right:14px;display:flex;flex-wrap:wrap;justify-content:flex-end;max-width:66vw;gap:6px;z-index:99}
 .lang-bar button{
   border:1px solid var(--pink-soft);background:#fff;color:var(--muted);border-radius:14px;
   padding:5px 12px;font-size:12px;cursor:pointer;transition:.2s;
