@@ -9,13 +9,130 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=<%= Date.now() %>">
 </head>
 <body>
-  <div class="access">
-    <h1><%= config.brand %></h1>
-    <p class="msg"><%= config.access_message %></p>
-    <p class="msg"><%= config.access_message2 %></p>
-    <a class="cta" href="<%= config.pikpak_url %>" target="_blank" rel="noopener sponsored"><%= config.cta_text %> →</a>
-    <div class="contact">Contact Us: <a href="mailto:feetworld2026@outlook.com">✉︎ feetworld2026@outlook.com</a></div>
+  <!-- 语言切换：简体 / 繁體 / EN -->
+  <div class="lang-bar" id="langBar">
+    <button type="button" data-lang="zh">简体</button>
+    <button type="button" data-lang="tw">繁體</button>
+    <button type="button" data-lang="en">EN</button>
   </div>
+
+  <div class="wrap">
+    <div class="brand"><%= config.brand %></div>
+    <p class="msg" data-i18n="msg1"><%= config.access_message %></p>
+    <p class="msg" data-i18n="msg2"><%= config.access_message2 %></p>
+
+    <!-- 迅雷云盘卡片 -->
+    <div class="card">
+      <div class="pk-head">
+        <img class="pk-logo" src="/img/xunlei.webp" alt="迅雷云盘">
+        <span class="pk-name" data-i18n="xunleiTitle">迅雷云盘</span>
+      </div>
+      <p class="desc" data-i18n="xunleiDesc">点击按钮打开迅雷云盘并自动跳转，若未打开，请复制链接到浏览器自行打开。</p>
+      <a class="btn" href="<%= config.xunlei_url %>" target="_blank" rel="noopener" data-i18n="xunleiBtn">↓ 点击获取资源</a>
+      <div class="link-box"><a href="<%= config.xunlei_url %>" rel="nofollow"><%= config.xunlei_url %></a></div>
+      <button class="copy-btn" data-link="<%= config.xunlei_url %>" data-i18n="copy">⧉ 复制</button>
+    </div>
+
+    <!-- PikPak 卡片 -->
+    <div class="card pikpak">
+      <div class="pk-head">
+        <img class="pk-logo" src="/img/pikpak.png" alt="PikPak">
+        <span class="pk-name" data-i18n="pikTitle">PikPak 云盘</span>
+      </div>
+      <p class="desc" data-i18n="pikDesc">推荐海外用户使用 PikPak：下载不限速、大容量。</p>
+      <a class="btn" href="<%= config.pikpak_url %>" target="_blank" rel="noopener" data-i18n="pikBtn">↓ 打开 PikPak</a>
+      <div class="link-box"><a href="<%= config.pikpak_url %>" rel="nofollow"><%= config.pikpak_url %></a></div>
+      <button class="copy-btn" data-link="<%= config.pikpak_url %>" data-i18n="copy">⧉ 复制</button>
+    </div>
+
+    <div class="contact"><span data-i18n="contact">联系我们</span>: <a href="mailto:feetworld2026@outlook.com">✉︎ feetworld2026@outlook.com</a></div>
+    <p class="disclaimer" data-i18n="disclaimer">文件由第三方云盘提供，本页仅做导航跳转，不对文件内容负责。</p>
+  </div>
+
+  <script>
+  /* ===== 三语切换（简/繁/EN），localStorage 记忆 ===== */
+  var I18N = {
+    zh: {
+      msg1: '专注足部主题的照片与视频，呈现温暖、富有艺术感的足部写真。',
+      msg2: '网站尚未完全上线 - 请先访问我们的云盘文件！',
+      xunleiTitle: '迅雷云盘',
+      xunleiDesc: '点击按钮打开迅雷云盘并自动跳转，若未打开，请复制链接到浏览器自行打开。',
+      xunleiBtn: '↓ 点击获取资源',
+      pikTitle: 'PikPak 云盘',
+      pikDesc: '推荐海外用户使用 PikPak：下载不限速、大容量。',
+      pikBtn: '↓ 打开 PikPak',
+      copy: '⧉ 复制', copied: '✓ 已复制',
+      contact: '联系我们',
+      disclaimer: '文件由第三方云盘提供，本页仅做导航跳转，不对文件内容负责。'
+    },
+    tw: {
+      msg1: '專注足部主題的照片與影片，呈現溫暖、富有藝術感的足部寫真。',
+      msg2: '網站尚未完全上線 - 請先訪問我們的雲盤檔案！',
+      xunleiTitle: '迅雷雲盤',
+      xunleiDesc: '點擊按鈕打開迅雷雲盤並自動跳轉，若未打開，請複製連結到瀏覽器自行打開。',
+      xunleiBtn: '↓ 點擊取得資源',
+      pikTitle: 'PikPak 雲盤',
+      pikDesc: '推薦海外用戶使用 PikPak：下載不限速、大容量。',
+      pikBtn: '↓ 打開 PikPak',
+      copy: '⧉ 複製', copied: '✓ 已複製',
+      contact: '聯絡我們',
+      disclaimer: '檔案由第三方雲盤提供，本頁僅做導航跳轉，不對檔案內容負責。'
+    },
+    en: {
+      msg1: 'Your destination for foot-focused photos and videos, showcasing warm, artistic foot portraits.',
+      msg2: 'The website is not fully launched yet - please visit our cloud drive files first！',
+      xunleiTitle: 'Thunder (Xunlei) Cloud Drive',
+      xunleiDesc: 'Tap the button to open Thunder Cloud Drive and auto-jump. If it does not open, copy the link into your browser.',
+      xunleiBtn: '↓ Get from Thunder',
+      pikTitle: 'PikPak Cloud Drive',
+      pikDesc: 'Recommended for overseas users: unlimited download speed, large storage.',
+      pikBtn: '↓ Open PikPak',
+      copy: '⧉ Copy', copied: '✓ Copied',
+      contact: 'Contact Us',
+      disclaimer: 'Files are hosted on third-party cloud drives. This page is for navigation only.'
+    }
+  };
+  function curLang() {
+    var l = localStorage.getItem('fw_lang');
+    return (l === 'tw' || l === 'en') ? l : 'zh';
+  }
+  function setLang(l) {
+    localStorage.setItem('fw_lang', l);
+    var d = I18N[l];
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n');
+      if (d[k] !== undefined) { el.innerHTML = d[k]; }
+    });
+    document.querySelectorAll('#langBar button').forEach(function (b) {
+      b.classList.toggle('on', b.getAttribute('data-lang') === l);
+    });
+    document.documentElement.lang = (l === 'zh') ? 'zh-CN' : (l === 'tw' ? 'zh-TW' : 'en');
+  }
+  document.querySelectorAll('#langBar button').forEach(function (b) {
+    b.addEventListener('click', function () { setLang(this.getAttribute('data-lang')); });
+  });
+  setLang(curLang());
+
+  /* ===== 复制按钮（通用，支持迅雷 / PikPak 两个） ===== */
+  document.querySelectorAll('.copy-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var link = this.getAttribute('data-link'), b = this;
+      function ok() {
+        b.textContent = I18N[curLang()].copied;
+        setTimeout(function () { b.textContent = I18N[curLang()].copy; }, 1500);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(link).then(ok);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = link; document.body.appendChild(ta); ta.select();
+        document.execCommand('copy'); document.body.removeChild(ta); ok();
+      }
+    });
+  });
+  </script>
+
+  <!-- 51.la 访问统计 -->
   <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
   <script>LA.init({id:"3RTMITLdHyDwbljF",ck:"3RTMITLdHyDwbljF"})</script>
 </body>

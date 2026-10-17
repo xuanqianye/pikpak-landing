@@ -18,12 +18,14 @@ theme: landing
 # ============================================================
 # 引导页自定义变量（改这里就行，不用动代码）
 # ============================================================
-# PikPak 云盘文件链接（落地目标：先访问云盘文件，非广告词）
+# 网盘文件链接（落地目标：先访问云盘文件，非广告词）
+# 迅雷云盘（国内用户）
+xunlei_url: "https://pan.xunlei.com/s/VP2CY43iqtv-bF5PcYtx54hDA1?pwd=vn74"
+# PikPak 云盘（海外用户）
 pikpak_url: "https://mypikpak.com/s/VP3V3ddFhPQOmLUf5IV7Ue3Go2"
-cta_text: "OPEN PikPak"
 brand: "Feetworld"
 access_message: "Your destination for foot-focused photos and videos, showcasing warm, artistic foot portraits."
-access_message2: "The website is not fully launched yet - please visit our PikPak cloud drive files first！"
+access_message2: "The website is not fully launched yet - please visit our cloud drive files first！"
 
 # ============================================================
 # 首页生成器（单页引导站必须，控制根 index.html 渲染）
