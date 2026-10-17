@@ -31,6 +31,10 @@
       <a class="btn" href="<%= config.xunlei_url %>" target="_blank" rel="noopener" data-i18n="xunleiBtn">↓ 点击获取资源</a>
       <div class="link-box"><a href="<%= config.xunlei_url %>" rel="nofollow"><%= config.xunlei_url %></a></div>
       <button class="copy-btn" data-link="<%= config.xunlei_url %>" data-i18n="copy">⧉ 复制</button>
+      <div class="qr-wrap">
+        <img class="qr-img" src="/img/qr-xunlei.png" alt="迅雷云盘二维码">
+        <p class="qr-tip" data-i18n="qrTip">扫码打开</p>
+      </div>
     </div>
 
     <!-- PikPak 卡片 -->
@@ -43,6 +47,10 @@
       <a class="btn" href="<%= config.pikpak_url %>" target="_blank" rel="noopener" data-i18n="pikBtn">↓ 打开 PikPak</a>
       <div class="link-box"><a href="<%= config.pikpak_url %>" rel="nofollow"><%= config.pikpak_url %></a></div>
       <button class="copy-btn" data-link="<%= config.pikpak_url %>" data-i18n="copy">⧉ 复制</button>
+      <div class="qr-wrap">
+        <img class="qr-img" src="/img/qr-pikpak.png" alt="PikPak 二维码">
+        <p class="qr-tip" data-i18n="qrTip">扫码打开</p>
+      </div>
     </div>
 
     <div class="contact"><span data-i18n="contact">联系我们</span>: <a href="mailto:feetworld2026@outlook.com">✉︎ feetworld2026@outlook.com</a></div>
@@ -62,21 +70,23 @@
       pikDesc: '推荐海外用户使用 PikPak：下载不限速、大容量。',
       pikBtn: '↓ 打开 PikPak',
       copy: '⧉ 复制', copied: '✓ 已复制',
+      qrTip: '扫码打开',
       contact: '联系我们',
       disclaimer: '文件由第三方云盘提供，本页仅做导航跳转，不对文件内容负责。'
     },
     tw: {
       msg1: '專注足部主題的照片與影片，呈現溫暖、富有藝術感的足部寫真。',
-      msg2: '網站尚未完全上線 - 請先訪問我們的雲盤檔案！',
-      xunleiTitle: '迅雷雲盤',
-      xunleiDesc: '點擊按鈕打開迅雷雲盤並自動跳轉，若未打開，請複製連結到瀏覽器自行打開。',
+      msg2: '網站尚未完全上線 - 請先訪問我們的雲端硬碟檔案！',
+      xunleiTitle: '迅雷雲端硬碟',
+      xunleiDesc: '點擊按鈕打開迅雷雲端硬碟並自動跳轉，若未打開，請複製連結到瀏覽器自行打開。',
       xunleiBtn: '↓ 點擊取得資源',
-      pikTitle: 'PikPak 雲盤',
+      pikTitle: 'PikPak 雲端硬碟',
       pikDesc: '推薦海外用戶使用 PikPak：下載不限速、大容量。',
       pikBtn: '↓ 打開 PikPak',
       copy: '⧉ 複製', copied: '✓ 已複製',
+      qrTip: '掃碼打開',
       contact: '聯絡我們',
-      disclaimer: '檔案由第三方雲盤提供，本頁僅做導航跳轉，不對檔案內容負責。'
+      disclaimer: '檔案由第三方雲端硬碟提供，本頁僅做導航跳轉，不對檔案內容負責。'
     },
     en: {
       msg1: 'Your destination for foot-focused photos and videos, showcasing warm, artistic foot portraits.',
@@ -88,6 +98,7 @@
       pikDesc: 'Recommended for overseas users: unlimited download speed, large storage.',
       pikBtn: '↓ Open PikPak',
       copy: '⧉ Copy', copied: '✓ Copied',
+      qrTip: 'Scan to open',
       contact: 'Contact Us',
       disclaimer: 'Files are hosted on third-party cloud drives. This page is for navigation only.'
     }
