@@ -61,7 +61,7 @@ body{
   background:var(--pink);transition:.2s;
 }
 .btn:hover{background:var(--pink-dark);transform:translateY(-1px)}
-.btn-invite{background:#fff;color:var(--pink);border:1.5px solid var(--pink)}
+.btn-invite{background:#fff;color:var(--pink);border:1.5px solid var(--pink);margin-top:12px}
 .btn-invite:hover{background:var(--pink);color:#fff}
 
 /* 链接复制卡 */
