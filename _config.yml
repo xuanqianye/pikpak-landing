@@ -21,10 +21,6 @@ theme: landing
 # 网盘文件链接（落地目标：先访问云盘文件，非广告词）
 # 迅雷云盘（国内用户）
 xunlei_url: "https://pan.xunlei.com/s/VP2CY43iqtv-bF5PcYtx54hDA1?pwd=vn74"
-# PikPak 云盘（海外用户）
-pikpak_url: "https://mypikpak.com/s/VP3V3ddFhPQOmLUf5IV7Ue3Go2"
-# PikPak 推荐计划邀请链接（用户注册/升级会员 → 你拿佣金，归因 1 年）
-pikpak_invite_url: "https://mypikpak.com/drive/payment?invitation-code=96466024"
 brand: "Feetworld"
 access_message: "Your destination for foot-focused photos and videos, showcasing warm, artistic foot portraits."
 access_message2: "The website is not fully launched yet - please visit our cloud drive files first！"

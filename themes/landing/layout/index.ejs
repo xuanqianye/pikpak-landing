@@ -38,25 +38,15 @@
       </div>
     </div>
 
-    <!-- PikPak 卡片 -->
-    <div class="card pikpak">
-      <div class="pk-head">
-        <img class="pk-logo" src="/img/pikpak.png" alt="PikPak">
-        <span class="pk-name" data-i18n="pikTitle">PikPak 云盘</span>
-      </div>
-      <p class="desc" data-i18n="pikDesc">推荐全球用户使用 PikPak：下载不限速、大容量。</p>
-      <a class="btn" href="<%= config.pikpak_url %>" target="_blank" rel="noopener" data-i18n="pikBtn">↓ 打开 PikPak</a>
-      <a class="btn btn-invite" href="<%= config.pikpak_invite_url %>" target="_blank" rel="noopener" data-i18n="pikBtn2">注册 PikPak 送额外空间</a>
-      <div class="link-box"><a href="<%= config.pikpak_url %>" rel="nofollow"><%= config.pikpak_url %></a></div>
-      <button class="copy-btn" data-link="<%= config.pikpak_url %>" data-i18n="copy">⧉ 复制</button>
-      <div class="qr-wrap">
-        <img class="qr-img" src="/img/qr-pikpak.png" alt="PikPak 二维码">
-        <p class="qr-tip" data-i18n="qrTip">扫码打开</p>
-      </div>
-    </div>
-
     <div class="contact"><span data-i18n="contact">联系我们</span>: <a href="mailto:feetworld2026@outlook.com">✉︎ feetworld2026@outlook.com</a></div>
     <p class="disclaimer" data-i18n="disclaimer">文件由第三方云盘提供，本页仅做导航跳转，不对文件内容负责。</p>
+  </div>
+
+  <!-- 底部横幅广告：点击跳转 Telegram 频道 -->
+  <div class="banner-ad">
+    <a href="https://t.me/zhuijuya" target="_blank" rel="noopener" aria-label="加入追剧鸭 Telegram 频道 @zhuijuya">
+      <img src="/img/banner-ad.svg" alt="加入追剧鸭 Telegram 频道 @zhuijuya">
+    </a>
   </div>
 
   <script>
@@ -67,10 +57,6 @@
       xunleiTitle: '迅雷云盘',
       xunleiDesc: '点击按钮打开迅雷云盘并自动跳转，若未打开，请复制链接到浏览器自行打开。',
       xunleiBtn: '↓ 点击获取资源',
-      pikTitle: 'PikPak 云盘',
-      pikDesc: '推荐全球用户使用 PikPak：下载不限速、大容量。',
-      pikBtn: '↓ 打开 PikPak',
-      pikBtn2: '注册 PikPak 送额外空间',
       copy: '⧉ 复制', copied: '✓ 已复制',
       qrTip: '扫码打开',
       contact: '联系我们',
@@ -81,10 +67,6 @@
       xunleiTitle: '迅雷雲端硬碟',
       xunleiDesc: '點擊按鈕打開迅雷雲端硬碟並自動跳轉，若未打開，請複製連結到瀏覽器自行打開。',
       xunleiBtn: '↓ 點擊取得資源',
-      pikTitle: 'PikPak 雲端硬碟',
-      pikDesc: '推薦全球用戶使用 PikPak：下載不限速、大容量。',
-      pikBtn: '↓ 打開 PikPak',
-      pikBtn2: '註冊 PikPak 送額外空間',
       copy: '⧉ 複製', copied: '✓ 已複製',
       qrTip: '掃碼打開',
       contact: '聯絡我們',
@@ -95,10 +77,6 @@
       xunleiTitle: 'Thunder (Xunlei) Cloud Drive',
       xunleiDesc: 'Tap the button to open Thunder Cloud Drive and auto-jump. If it does not open, copy the link into your browser.',
       xunleiBtn: '↓ Get from Thunder',
-      pikTitle: 'PikPak Cloud Drive',
-      pikDesc: 'Recommended for global users: unlimited download speed, large storage.',
-      pikBtn: '↓ Open PikPak',
-      pikBtn2: 'Sign up PikPak · Get Bonus Space',
       copy: '⧉ Copy', copied: '✓ Copied',
       qrTip: 'Scan to open',
       contact: 'Contact Us',
@@ -109,10 +87,6 @@
       xunleiTitle: '迅雷（Xunlei）クラウドドライブ',
       xunleiDesc: 'ボタンをタップすると迅雷クラウドドライブが開き、自動的に移動します。開かない場合は、リンクをコピーしてブラウザで開いてください。',
       xunleiBtn: '↓ 迅雷から取得',
-      pikTitle: 'PikPak クラウドドライブ',
-      pikDesc: '海外のユーザーにおすすめ：ダウンロード速度制限なし、大容量。',
-      pikBtn: '↓ PikPak を開く',
-      pikBtn2: 'PikPak に登録して特典容量をゲット',
       copy: '⧉ コピー', copied: '✓ コピー済み',
       qrTip: 'スキャンして開く',
       contact: 'お問い合わせ',
@@ -123,10 +97,6 @@
       xunleiTitle: '쉰레이(Xunlei) 클라우드 드라이브',
       xunleiDesc: '버튼을 눌러 쉰레이 클라우드 드라이브를 열고 자동으로 이동합니다. 열리지 않으면 링크를 복사하여 브라우저에서 여세요.',
       xunleiBtn: '↓ 쉰레이에서 받기',
-      pikTitle: 'PikPak 클라우드 드라이브',
-      pikDesc: '해외 사용자에게 추천: 무제한 다운로드 속도, 대용량 저장.',
-      pikBtn: '↓ PikPak 열기',
-      pikBtn2: 'PikPak 가입하고 추가 용량 받기',
       copy: '⧉ 복사', copied: '✓ 복사됨',
       qrTip: '스캔하여 열기',
       contact: '문의하기',
@@ -155,7 +125,7 @@
   });
   setLang(curLang());
 
-  /* ===== 复制按钮（通用，支持迅雷 / PikPak 两个） ===== */
+  /* ===== 复制按钮（通用，支持迅雷） ===== */
   document.querySelectorAll('.copy-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var link = this.getAttribute('data-link'), b = this;

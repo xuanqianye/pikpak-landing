@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 140" width="720" height="140" role="img" aria-label="加入追剧鸭 Telegram 频道">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff2e63"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="140" rx="16" fill="url(#bg)"/>
+  <text x="40" y="62" fill="#ffffff" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="30" font-weight="700">加入「追剧鸭」Telegram 频道</text>
+  <text x="40" y="104" fill="#ffe3ec" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="20">海量影视剧集每日更新 · 点击加入 @zhuijuya</text>
+</svg>
