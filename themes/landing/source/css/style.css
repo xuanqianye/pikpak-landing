@@ -96,10 +96,6 @@ body{
 .disclaimer{text-align:center;font-size:11px;color:#c8c8c8;margin-top:16px;line-height:1.6}
 
 /* 底部横幅广告 */
-.banner-ad{text-align:center;margin:30px auto 0;max-width:480px}
-.banner-ad a{display:inline-block;text-decoration:none}
-.banner-ad img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);transition:.2s}
-.banner-ad a:hover img{transform:translateY(-1px)}
 
 @media(max-width:640px){
   .brand{font-size:22px}
